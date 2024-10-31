@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-typezen",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Plugin for turning zen mode as you type",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
