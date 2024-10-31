@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-typezen",
-	"version": "1.0.0",
+	"version": "0.0.3",
 	"description": "Plugin for turning zen mode as you type",
 	"main": "main.js",
 	"scripts": {

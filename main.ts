@@ -1,6 +1,5 @@
-import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginManifest, PluginSettingTab, Setting } from 'obsidian';
+import { App, Plugin, PluginManifest } from 'obsidian';
 
-const FADE_ANIMATION_DURATION = 0.15;
 export default class TypezenPlugin extends Plugin {
 	private elementsShown = true;
 
@@ -27,7 +26,7 @@ export default class TypezenPlugin extends Plugin {
 				this.elementsShown = false;
 				[this.ribbon, this.leftSide, this.rightSide, this.tabBar].forEach((element) => {
 					if (element) {
-						element.setCssStyles({transition: `opacity ${FADE_ANIMATION_DURATION}s ease-in-out`, opacity: '0'});
+						element.addClass('typezen-hide');
 					}
 				})
 			}
@@ -39,7 +38,7 @@ export default class TypezenPlugin extends Plugin {
 				this.elementsShown = true;
 				[this.ribbon, this.leftSide, this.rightSide, this.tabBar].forEach((element) => {
 					if (element) {
-						element.setCssStyles({transition: `opacity ${FADE_ANIMATION_DURATION}s ease-in-out`, opacity: '1'});
+						element.removeClass('typezen-hide')
 					}
 				})
 			}
