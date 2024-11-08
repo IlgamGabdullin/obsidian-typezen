@@ -12,11 +12,13 @@ export default class TypezenPlugin extends Plugin {
 	constructor(app: App, manifest: PluginManifest) {
 		super(app, manifest);
 
-		this.ribbon = document.querySelector('.workspace-ribbon');
-		this.leftSide = document.querySelector('.workspace-split.mod-left-split');
-		this.rightSide = document.querySelector('.workspace-split.mod-right-split');
-		this.center = document.querySelector('.workspace-split.mod-root');
-		this.tabBar = this.center?.querySelector('.workspace-split.mod-root .workspace-tab-header-container') ?? null;
+		this.app.workspace.onLayoutReady(() => {
+			this.ribbon = document.querySelector('.workspace-ribbon');
+			this.leftSide = document.querySelector('.workspace-split.mod-left-split');
+			this.rightSide = document.querySelector('.workspace-split.mod-right-split');
+			this.center = document.querySelector('.workspace-split.mod-root');
+			this.tabBar = this.center?.querySelector('.workspace-split.mod-root .workspace-tab-header-container') ?? null;
+		})
 	}
 
 	async onload() {		

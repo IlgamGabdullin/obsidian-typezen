@@ -1,4 +1,4 @@
-# Obsidian Typezen Plugin
+# Typezen Plugin for Obsidian
 The plugin lets you remove all distractions as you type 
 
 ## Lets how it works 
